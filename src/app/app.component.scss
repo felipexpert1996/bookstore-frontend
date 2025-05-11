@@ -1,0 +1,21 @@
+#main-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80% 10%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    font-family: "Roboto", sans-serif;
+}
+
+#area-menu {
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+#area-main {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#area-footer {
+    grid-area: 3 / 1 / 4 / 2;
+}

@@ -1,0 +1,21 @@
+#menu-container{
+    background-color: #252423;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-style: solid;
+    border-color: #4A484A;
+    border-width: 1px;
+    border-radius: 10px;
+
+    li {
+        display: inline;
+        margin-left: 30px;
+        text-align: center;
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+}
