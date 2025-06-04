@@ -1,1 +1,12 @@
-<p>highlight works!</p>
+<div id="container-book-highlight">
+   <ng-template [ngIf]="highlightBook">
+        <div class="col-1">
+            <h2>{{highlightBook.name}}</h2>
+            <p>{{highlightBook.description}}</p>
+        </div>
+        <div class="col-2">
+            <img ngSrc={{highlightBook.cover}} width="300" height="450"/>
+        </div>
+    </ng-template>
+</div>
+

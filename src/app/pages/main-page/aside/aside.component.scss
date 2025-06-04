@@ -1,6 +1,7 @@
 #aside-container{
     margin-top: 30vh;
-    margin-left: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
     color: #ffffff;
 
     h2, p {
@@ -9,8 +10,10 @@
 
     button {
         margin-top: 10%;
-        width: 200px;
+        width: 10vw;
         color: #ffffff;
         border-color: #ffffff;
+        font-size: 1rem;
+        min-width: 100px;
     }
 }

@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 1fr;
-    gap: 8px;
+    gap: 0px;
 
     #main-page-section-1{
         background-color: colors.$main-purple;
@@ -16,6 +16,13 @@
 
     #main-page-section-2{
         background-color: colors.$main-white;
+    }
+
+    #main-page-reliases{
+        position: absolute;
+        top: 65vh;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
 }
 

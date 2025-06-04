@@ -1,0 +1,12 @@
+<div>
+    <mat-card appearance="outlined" id="card-releases">
+        <mat-card-header>
+            <mat-card-title>Últimos lançamentos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <ng-template ngFor let-book [ngForOf]="books">
+                <img matTooltip={{book.name}} ngSrc={{book.cover}} width="150" height="200" />
+            </ng-template>
+        </mat-card-content>
+    </mat-card>
+</div>
