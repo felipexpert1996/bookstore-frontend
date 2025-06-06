@@ -4,7 +4,6 @@
     <body>
       <trans-unit id="4217984661490951669" datatype="html">
         <source>Livros</source>
-        <target>Books</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/menu/menu.component.html</context>
           <context context-type="linenumber">4,5</context>
@@ -12,7 +11,6 @@
       </trans-unit>
       <trans-unit id="4192143499889021312" datatype="html">
         <source>Eventos</source>
-        <target>Events</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/menu/menu.component.html</context>
           <context context-type="linenumber">5,6</context>
@@ -20,7 +18,6 @@
       </trans-unit>
       <trans-unit id="1236061678414703716" datatype="html">
         <source>Contato</source>
-        <target>Contact</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/menu/menu.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -28,7 +25,6 @@
       </trans-unit>
       <trans-unit id="5489968893403305908" datatype="html">
         <source>Sobre</source>
-        <target>About</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/core/menu/menu.component.html</context>
           <context context-type="linenumber">7,8</context>
@@ -36,7 +32,6 @@
       </trans-unit>
       <trans-unit id="4737283128591311969" datatype="html">
         <source>Crie sua lista de presentes</source>
-        <target>Create your gift list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main-page/aside/aside.component.html</context>
           <context context-type="linenumber">2,4</context>
@@ -44,7 +39,6 @@
       </trans-unit>
       <trans-unit id="2596172426425932800" datatype="html">
         <source>Crie sua lista de presentes personalizada</source>
-        <target>Create your personalized gift list</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main-page/aside/aside.component.html</context>
           <context context-type="linenumber">4,6</context>
@@ -52,7 +46,6 @@
       </trans-unit>
       <trans-unit id="1185117915889403189" datatype="html">
         <source>Criar</source>
-        <target>Create</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main-page/aside/aside.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -60,7 +53,6 @@
       </trans-unit>
       <trans-unit id="5647153254064361573" datatype="html">
         <source>Últimos lançamentos</source>
-        <target>Latest releases</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/main-page/release/release.component.html</context>
           <context context-type="linenumber">4</context>

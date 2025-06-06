@@ -71,6 +71,7 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
+              "localize": ["pt"],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
