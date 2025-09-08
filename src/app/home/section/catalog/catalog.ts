@@ -9,5 +9,4 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './catalog.scss',
 })
 export class Catalog {
-
 }
