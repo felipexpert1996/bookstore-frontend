@@ -3,4 +3,5 @@ export interface HighlightModel {
     title: string;
     imageUrl: string;
     author: string;
+    price: number;
 }

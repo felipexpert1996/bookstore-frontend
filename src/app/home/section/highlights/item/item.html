@@ -2,5 +2,6 @@
     <img ngSrc={{item.imageUrl}} width="712" height="1000" alt="Book {{item.title}} Cover">
     <h3>{{item.title}}</h3>
     <p>{{item.author}}</p>
+    <p>{{item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}</p>
     <button mat-raised-button id="btn-highlight-buy">Comprar</button>
 </div>
