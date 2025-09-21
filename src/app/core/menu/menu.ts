@@ -4,10 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { SearchField } from '../search-field/search-field';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
-  imports: [MatIconModule, MatButtonModule, MatToolbarModule, SearchField],
+  imports: [MatIconModule, MatButtonModule, MatToolbarModule, SearchField, RouterLink],
   templateUrl: './menu.html',
   styleUrl: './menu.scss'
 })

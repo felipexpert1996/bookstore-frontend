@@ -1,0 +1,15 @@
+<div id="detail-container">
+    <div>
+        <img ngSrc={{book.imageUrl}} width="712" height="1000" alt="Book {{book.title}} Cover" priority>
+    </div>
+    <div>
+        <h1>{{book.title}}</h1>
+        <h2>by {{book.author}}</h2>
+        <p>{{book.description}}</p>
+        <p>{{book.price | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}</p>
+        <div id="actions">
+            <button mat-raised-button color="primary">Adicionar ao carrinho</button>
+            <button mat-raised-button color="primary">Comprar agora</button>
+        </div>
+    </div>
+</div>

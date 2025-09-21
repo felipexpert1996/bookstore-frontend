@@ -3,10 +3,11 @@ import { NgOptimizedImage } from "@angular/common";
 import { MatButtonModule } from '@angular/material/button';
 import { BookModel } from '../../../../model/book.model';
 import { CurrencyPipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-item',
-  imports: [NgOptimizedImage, MatButtonModule, CurrencyPipe],
+  imports: [NgOptimizedImage, MatButtonModule, CurrencyPipe, RouterModule],
   templateUrl: './item.html',
   styleUrl: './item.scss'
 })

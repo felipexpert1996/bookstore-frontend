@@ -10,5 +10,9 @@ export const routes: Routes = [
     {
         path: 'home',
         component: Home
+    },
+    {
+        path: 'detail/:id',
+        loadComponent: () => import('./detail/detail').then(m => m.Detail)
     }
 ];
