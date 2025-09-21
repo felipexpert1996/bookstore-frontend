@@ -1,15 +1,13 @@
-import { H } from '@angular/cdk/keycodes';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BookModel } from '../../model/book.model';
+import { BOOKS } from '../../mock/books';
 import { Observable, of } from 'rxjs';
-import { BOOKS } from '../mock/books';
-import { BookModel } from '../model/book.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HighlightService {
-
+export class BookService {
   private apiUrl = '';
   
   constructor(private http: HttpClient) {}

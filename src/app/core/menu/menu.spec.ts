@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { Menu } from './menu';
 import { provideZonelessChangeDetection } from '@angular/core';
+import { DesktopMenu } from './desktop-menu';
 import { By } from '@angular/platform-browser';
 
-describe('Menu', () => {
-  let component: Menu;
-  let fixture: ComponentFixture<Menu>;
+describe('DesktopMenu', () => {
+  let component: DesktopMenu;
+  let fixture: ComponentFixture<DesktopMenu>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Menu],
+      imports: [DesktopMenu],
       providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Menu);
+    fixture = TestBed.createComponent(DesktopMenu);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,10 +23,15 @@ describe('Menu', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render the DesktopMenu and MobileMenu', () => {
-    const desktop = fixture.debugElement.query(By.css('#desktop-menu'));
-    const mobile = fixture.debugElement.query(By.css('#mobile-menu'));
-    expect(desktop).toBeTruthy();
-    expect(mobile).toBeTruthy();
+  it('should render the title "Bookstore"', () => {
+    expect(fixture.nativeElement.textContent).toContain('Livraria');
+  });
+
+  it('should render the title and main buttons', () => {
+    const toolbar = fixture.nativeElement as HTMLElement;
+    expect(toolbar.textContent).toContain('Livraria');
+    const labels = fixture.debugElement.queryAll(By.css('button[mat-button]'))
+      .map(btn => btn.nativeElement.textContent.trim());
+    expect(labels).toEqual(jasmine.arrayContaining(['Catálogo', 'Promoções', 'Sobre', 'Contato']));
   });
 });

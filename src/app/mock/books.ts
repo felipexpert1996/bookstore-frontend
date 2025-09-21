@@ -1,4 +1,4 @@
-export const HIGHLIGHTS = [
+export const BOOKS = [
     {
         id: '1',
         title: 'O senhor dos aneis',

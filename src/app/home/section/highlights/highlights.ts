@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item/item';
 import { CommonModule } from '@angular/common';
-import { HighlightService } from '../../../services/Highlight.service';
-import { HighlightModel } from '../../../model/highlight.model';
+import { BookModel } from '../../../model/book.model';
+import { BookService } from '../../../services/book/book.service';
 
 @Component({
   selector: 'app-highlights',
@@ -12,12 +12,12 @@ import { HighlightModel } from '../../../model/highlight.model';
 })
 export class Highlights implements OnInit {
 
-  highlights: HighlightModel[] = [];
+  highlights: BookModel[] = [];
 
-  constructor(private highlightService: HighlightService) {}
+  constructor(private bookService: BookService) {}
 
   ngOnInit(): void {
-    this.highlightService.getData().subscribe(data => {
+    this.bookService.getData().subscribe(data => {
       this.highlights = data;
     });
   }

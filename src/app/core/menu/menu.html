@@ -1,2 +1,31 @@
-<app-desktop-menu id="desktop-menu"/>
-<app-mobile-menu id="mobile-menu"/>
+<div id="menu">
+  <mat-toolbar color="primary">
+
+    <mat-toolbar-row>
+      <span>Livraria</span>
+
+      <span class="space"></span>
+
+      <div id="search-wrapper">
+        <app-search-field />
+      </div>
+
+      <span class="space"></span>
+
+      <button mat-icon-button routerLink="/cart">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <span class="space"></span>
+      <div id="nav-links">
+        <button mat-button routerLink="/books">Catálogo</button>
+        <button mat-button routerLink="/authors">Promoções</button>
+        <button mat-button routerLink="/categories">Sobre</button>
+        <button mat-button routerLink="/contact">Contato</button>
+      </div>
+      <span class="space"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

@@ -1,0 +1,17 @@
+<form>
+    <mat-form-field appearance="outline" id="search-field">
+        <mat-label>Busca</mat-label>
+            <input type="text"
+                placeholder="Busque por título, autor, categoria..."
+                aria-label="Busca"
+                matInput
+                [formControl]="searchControl"
+                [matAutocomplete]="auto"
+                >
+            <mat-autocomplete #auto="matAutocomplete">
+                @for (option of filteredOptions | async; track option) {
+                <mat-option [value]="option">{{option}}</mat-option>
+            }
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

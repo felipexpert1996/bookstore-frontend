@@ -1,4 +1,4 @@
-export interface HighlightModel {
+export interface BookModel {
     id: string;
     title: string;
     imageUrl: string;
