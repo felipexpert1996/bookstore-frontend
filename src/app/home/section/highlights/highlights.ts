@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Item } from './item/item';
 import { CommonModule } from '@angular/common';
 import { BookModel } from '../../../model/book.model';
@@ -14,7 +14,7 @@ export class Highlights implements OnInit {
 
   highlights: BookModel[] = [];
 
-  constructor(private bookService: BookService) {}
+  private bookService = inject(BookService);
 
   ngOnInit(): void {
     this.bookService.getData().subscribe(data => {

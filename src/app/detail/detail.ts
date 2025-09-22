@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { BookService } from '../services/book/book.service';
 import { BookModel } from '../model/book.model';
 import { ActivatedRoute } from '@angular/router';
@@ -15,7 +15,8 @@ export class Detail implements OnInit {
   book!: BookModel;
   itemId!: string;
 
-  constructor(private bookService: BookService, private route: ActivatedRoute) {}
+  private bookService = inject(BookService);
+  private route = inject(ActivatedRoute);
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {

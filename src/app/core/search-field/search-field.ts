@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -17,15 +17,15 @@ import { BookService } from '../../services/book/book.service';
 export class SearchField implements OnInit {
   searchControl = new FormControl('');
   options: string[] = [];
-  filteredOptions: Observable<string[]> | undefined;
+  filteredOptions!: Observable<string[]>;
 
-  constructor(private bookService: BookService) {
+  private bookService = inject(BookService);
+
+  ngOnInit() {
     this.bookService.getData().subscribe(books => {
       this.options = books.map(book => book.title);
     });
-  }
 
-  ngOnInit() {
     this.filteredOptions = this.searchControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || '')),

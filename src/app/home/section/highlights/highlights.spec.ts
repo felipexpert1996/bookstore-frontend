@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Highlights } from './highlights';
+import { provideZonelessChangeDetection } from '@angular/core';
+import { provideHttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+
 
 describe('Highlights', () => {
   let component: Highlights;
@@ -8,7 +12,8 @@ describe('Highlights', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Highlights]
+      imports: [Highlights],
+      providers: [provideZonelessChangeDetection(), provideHttpClient(), { provide: ActivatedRoute, useValue: {} }]
     })
     .compileComponents();
 

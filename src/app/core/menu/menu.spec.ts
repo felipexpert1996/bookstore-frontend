@@ -1,20 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
-import { DesktopMenu } from './desktop-menu';
+import { Menu } from './menu';
 import { By } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
-describe('DesktopMenu', () => {
-  let component: DesktopMenu;
-  let fixture: ComponentFixture<DesktopMenu>;
+describe('Menu', () => {
+  let component: Menu;
+  let fixture: ComponentFixture<Menu>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DesktopMenu],
-      providers: [provideZonelessChangeDetection()]
+      imports: [Menu],
+      providers: [provideZonelessChangeDetection(), provideHttpClient(), { provide: ActivatedRoute, useValue: {} },]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DesktopMenu);
+    fixture = TestBed.createComponent(Menu);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
