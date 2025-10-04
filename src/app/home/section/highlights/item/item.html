@@ -5,5 +5,5 @@
         <p>{{item.author}}</p>
         <p>{{item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}</p>
     </a>
-    <button mat-raised-button id="btn-highlight-buy">Comprar</button>
+    <button mat-raised-button id="btn-highlight-buy" (click)="addToCart(item)" aria-hidden="false">Comprar</button>
 </div>
