@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { NgOptimizedImage } from "@angular/common";
 import { MatButtonModule } from '@angular/material/button';
 import { BookModel } from '../../../../model/book.model';
@@ -16,7 +16,7 @@ import { CartModel } from '../../../../model/cart.model';
 export class Item {
   @Input() item!: BookModel;
 
-  constructor(private cartService: CartService) { }
+  private cartService: CartService = inject(CartService);
 
   addToCart(book: BookModel): void {
     const bookCartModel: CartModel = { 
