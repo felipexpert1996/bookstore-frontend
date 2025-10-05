@@ -1,9 +1,9 @@
 <div>
     <a [routerLink]="['/detail', item.id]" id="link-highlight-item">
         <img ngSrc={{item.imageUrl}} width="712" height="1000" alt="Book {{item.title}} Cover">
-        <h3>{{item.title}}</h3>
-        <p>{{item.author}}</p>
-        <p>{{item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}</p>
+        <h3 id="title">{{item.title}}</h3>
+        <p id="author">{{item.author}}</p>
+        <p id="price">{{item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}</p>
     </a>
     <button mat-raised-button id="btn-highlight-buy" (click)="addToCart(item)" aria-hidden="false">Comprar</button>
 </div>
