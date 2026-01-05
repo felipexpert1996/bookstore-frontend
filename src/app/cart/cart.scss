@@ -1,0 +1,73 @@
+#cart-container {
+    margin: 5%;
+    text-align: center;
+
+    .cart-item{
+        margin-bottom: 3%;
+    }
+
+    .cart-content {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 15px;
+
+        @media (max-width: 600px) {
+            .cart-content {
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+            }
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .author {
+            text-align: center;
+            font-size: 150%;
+            color: #888;
+            margin-top: -10px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .description {
+            min-height: 50vh;
+            font-size: 1rem;
+            margin-top: 10px;
+            text-align: justify;
+            color: #555;
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 80%;
+            margin: 10px auto;
+        }
+    }
+
+    img{
+        max-width: 40%;
+        height: auto;
+    }
+
+    .actions {
+        text-align: center;
+        margin-top: 10%;
+        
+        .btn-remove {
+            color: red
+        }
+
+        #input-book-quantity {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3%;
+        }
+    }
+}

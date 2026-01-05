@@ -1,5 +1,5 @@
-export interface CartModel {
-   id: string;
+export interface MaterializedCartModel {
+    id: string;
     title: string;
     author: string;
     price: number;

@@ -20,10 +20,8 @@ export class Item {
 
   addToCart(book: BookModel): void {
     const bookCartModel: CartModel = { 
-      id: book.id, 
-      name: book.title, 
-      price: book.price, 
-      quantity: 1
+      quantity: 1,
+      ...book
     };
     this.cartService.addToCart(bookCartModel);
   }

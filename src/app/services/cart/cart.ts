@@ -7,7 +7,7 @@ import { CartModel } from '../../model/cart.model';
 })
 export class CartService {
   
-  private items: CartModel[] = [];
+  protected items: CartModel[] = [];
   private cartSubject = new BehaviorSubject<CartModel[]>([]);
 
   cart$ = this.cartSubject.asObservable();
@@ -32,11 +32,21 @@ export class CartService {
     this.cartSubject.next(this.items);
   }
 
-  getTotalPrice(): number {
-    return this.items.reduce((total, item) => total + item.price * item.quantity, 0);
-  }
-
   getTotalItems(): number {
     return this.items.reduce((total, item) => total + item.quantity, 0);
+  }
+
+  getItems(): CartModel[] {
+    return this.items;
+  }
+
+  updateItem(cartItem: CartModel): CartModel[]{
+    this.items.map((item)=>{
+      if (item.id === cartItem.id){
+        return cartItem;
+      }
+      return item;
+    });
+    return this.getItems();
   }
 }

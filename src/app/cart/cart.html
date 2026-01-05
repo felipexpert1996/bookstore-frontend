@@ -1,0 +1,35 @@
+<div id="cart-container">
+    <h1>Seu Carrinho</h1>
+    <div id="cart-items">
+        @for (item of cart; track item.id) {
+        <mat-card class="cart-item" appearance="outlined">
+            <mat-card-content class="cart-content">
+                <div>
+                    <img [ngSrc]="item.imageUrl" width="712" height="1000" alt="{{ ` cover for `+ item.title }}" />
+                </div>
+                <div>
+                    <h2 class="title">{{ item.title }}</h2>
+                    <p class="author">{{ item.author }}</p>
+                    <span class="price">{{ item.price | currency }}</span>
+                    <div class="actions">
+                        <div id="input-book-quantity">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Quantidade</mat-label>
+                                <input style="text-align: center" type="number" matInput placeholder="Quantidade" [value]="item.quantity"
+                                    disabled="true">
+                                <button (click)="removeQuantity(1, item.id)" [disabled]='item.quantity < 2' matPrefix mat-icon-button><mat-icon aria-hidden="false"
+                                        aria-label="remove book quantity" fontIcon="exposure_neg_1"></mat-icon></button>
+                                <button (click)="addQuantity(1, item.id)" [disabled]='item.quantity > 98' matSuffix mat-icon-button><mat-icon aria-hidden="false"
+                                        aria-label="add book quantity" fontIcon="plus_one"></mat-icon></button>
+                            </mat-form-field>
+                        </div>
+                        <button mat-button class="btn-remove" (click)="removeItem(item.id)">Remover</button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        } @empty {
+        <p>Seu carrinho está vazio.</p>
+        }
+    </div>
+</div>
