@@ -2,7 +2,6 @@ import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { CartService } from '../services/cart/cart';
 import { CommonModule, CurrencyPipe, NgOptimizedImage } from '@angular/common';
 import { CartModel } from '../model/cart.model';
-import { BookService } from '../services/book/book.service';
 import { MaterializedCartModel } from './materialized-cart.model';
 import { Subject, takeUntil } from 'rxjs';
 import { MatCardModule } from '@angular/material/card';
@@ -57,5 +56,9 @@ export class Cart implements OnInit, OnDestroy {
     if(item && item.quantity > 1){
       item.quantity -= quantity;
     }
+  }
+
+  get totalValue(): number {
+    return this.cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   }
 }

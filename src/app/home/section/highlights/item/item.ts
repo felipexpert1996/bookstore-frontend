@@ -6,6 +6,7 @@ import { CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CartService } from '../../../../services/cart/cart';
 import { CartModel } from '../../../../model/cart.model';
+import { NotificationService } from '../../../../services/notification/notification';
 
 @Component({
   selector: 'app-item',
@@ -17,6 +18,7 @@ export class Item {
   @Input() item!: BookModel;
 
   private cartService: CartService = inject(CartService);
+  private notification = inject(NotificationService);
 
   addToCart(book: BookModel): void {
     const bookCartModel: CartModel = { 
@@ -24,5 +26,6 @@ export class Item {
       ...book
     };
     this.cartService.addToCart(bookCartModel);
+    this.notification.showSuccess(`${book.title} adicionado ao carrinho!`);
   }
 }

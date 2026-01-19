@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CurrencyPipe, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { CartService } from '../services/cart/cart';
+import { NotificationService } from '../services/notification/notification';
 
 @Component({
   selector: 'app-detail',
@@ -19,6 +20,7 @@ export class Detail implements OnInit {
   private bookService = inject(BookService);
   private route = inject(ActivatedRoute);
   private cartService = inject(CartService);
+  private notification = inject(NotificationService);
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -37,5 +39,6 @@ export class Detail implements OnInit {
 
   addToCart(book: BookModel): void {
     this.cartService.addToCart({quantity: 1, ...book});
+    this.notification.showSuccess(`${book.title} adicionado ao carrinho!`);
   }
 }
